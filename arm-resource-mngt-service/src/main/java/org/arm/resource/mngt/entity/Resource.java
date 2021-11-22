@@ -30,6 +30,5 @@ public class Resource {
 	private Timestamp updateDate;
 	private int isDeleted;
 	
-	@ManyToOne
-	private Task task;
+	
 }

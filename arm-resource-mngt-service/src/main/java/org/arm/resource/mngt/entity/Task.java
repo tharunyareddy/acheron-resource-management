@@ -6,7 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -26,8 +28,8 @@ public class Task {
 	private int taskId;
 	private String taskName;
 	private String taskOwner;
-	private Timestamp startdate;
-	private Timestamp enddate;
+	private Timestamp startDate;
+	private Timestamp endDate;
 	private float duration;
 	@Enumerated(EnumType.STRING)
 	private Priority priority;
@@ -37,6 +39,10 @@ public class Task {
 	private Timestamp updateDate;
 	private int isDeleted;
 	@ManyToOne
+	@JoinColumn(name="project_id")
 	private Project project;
 	
+	@ManyToOne
+	@JoinColumn(name="resource_id")
+	private Resource resource;
 }
