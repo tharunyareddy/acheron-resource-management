@@ -1,5 +1,6 @@
 https://www.baeldung.com/jackson-bidirectional-relationships-and-infinite-recursion
 https://examples.javacodegeeks.com/jackson-bidirectional-relationships/
+https://dzone.com/articles/introduction-to-spring-data-jpa-part-6-bidirection
 
 
 
@@ -16,5 +17,14 @@ do -> git checkout -b test <name of remote>/dev [ git checkout -b test for above
 do -> git commit 
 
 do -> git push [it can give you git push set origin type hint .. use that command]
+
+
+
+
+Resource View
+
+Get all resource [this will give you all resources and availability and leave]
+For all the resources get the tasks allocated to him/her by query
+associate above two results
 
 
