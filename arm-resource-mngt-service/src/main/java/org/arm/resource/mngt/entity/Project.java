@@ -41,6 +41,8 @@ public class Project {
 	private Timestamp createDate;
 	private Timestamp updateDate;
 	private int isDeleted;
+	private String createdBy;
+	private String updatedBy;
 	
 	@ManyToOne
 	@JoinColumn(name="campaign_id")

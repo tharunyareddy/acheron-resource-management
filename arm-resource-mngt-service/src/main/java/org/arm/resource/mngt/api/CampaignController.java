@@ -19,7 +19,7 @@ public class CampaignController {
 	private ICampaignService campaignService;
 	
 	@GetMapping("/campaign")
-	public List<Campaign> allC(){
+	public List<Campaign> allCampaign(){
 		return campaignService.getAllCampaign();
 	}
 	

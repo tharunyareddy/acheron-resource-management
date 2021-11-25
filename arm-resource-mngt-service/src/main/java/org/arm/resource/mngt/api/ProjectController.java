@@ -21,7 +21,7 @@ public class ProjectController {
 	
 	
 	@GetMapping("/project")
-	public List<Project> allt(){
+	public List<Project> allProject(){
 		return projectService.getAllProject();
 	}
 	

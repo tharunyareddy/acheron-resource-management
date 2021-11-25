@@ -7,9 +7,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,6 +26,9 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@JsonIdentityInfo(
+		   generator = ObjectIdGenerators.PropertyGenerator.class,
+		   property = "resourceId")
 public class Resource {
 
 	@Id
@@ -29,13 +36,20 @@ public class Resource {
 	private int resourceId;
 	private String resourceName;
 	private String resourceType;
-	private String availability;
 	private Timestamp createDate;
 	private Timestamp updateDate;
 	private int isDeleted;
 	@OneToMany(mappedBy="resource")
-	@JsonBackReference
 	private List<Task> taskList;
+	private String resourceImage;
+	private String region;
+	@OneToOne
+	@JoinColumn(name="availableId")
+	private Availability availability;
+	
+	@OneToOne
+	@JoinColumn(name="leave_id")
+	private Leaves leave;
 	
 	public int getResourceId() {
 		return resourceId;
@@ -55,12 +69,7 @@ public class Resource {
 	public void setResourceType(String resourceType) {
 		this.resourceType = resourceType;
 	}
-	public String getAvailability() {
-		return availability;
-	}
-	public void setAvailability(String availability) {
-		this.availability = availability;
-	}
+
 	public Timestamp getCreateDate() {
 		return createDate;
 	}
