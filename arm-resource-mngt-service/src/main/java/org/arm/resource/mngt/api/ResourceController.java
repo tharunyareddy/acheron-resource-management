@@ -8,6 +8,7 @@ import org.arm.resource.mngt.entity.Resource;
 import org.arm.resource.mngt.service.ResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,7 +26,6 @@ public class ResourceController {
 	@PostMapping("/resource/create")
 	public void createResource(){
 		Resource resource = new Resource();
-		resource.setAvailability("Available");
 		resource.setCreateDate(new Timestamp(new Date().getTime()));
 		resource.setIsDeleted(0);
 		resource.setResourceName("T User 2");
@@ -33,6 +33,8 @@ public class ResourceController {
 		
 		resourceService.save(resource);
 	}
+	
+
 	
 	
 } 

@@ -22,7 +22,7 @@ import lombok.ToString;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
+//@ToString
 public class Campaign {
 	@Id
 	private int campaignId;
@@ -37,6 +37,8 @@ public class Campaign {
 	private Timestamp createDate;
 	private Timestamp updateDate;
 	private int isDeleted;
+	private String createdBy;
+	private String updatedBy;
 	
 	@OneToMany(mappedBy = "campaign")
 	@JsonManagedReference
