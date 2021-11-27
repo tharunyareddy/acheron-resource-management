@@ -61,6 +61,6 @@ public class TaskVO implements Serializable {
 	
 	@ManyToOne
 	@JoinColumn(name = "resourceId")
-	private ResourceVO resourceVO;
+	private ResourceVO resource;
 
 }

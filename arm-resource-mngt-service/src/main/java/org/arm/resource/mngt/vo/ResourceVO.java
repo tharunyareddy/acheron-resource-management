@@ -45,7 +45,7 @@ public class ResourceVO implements Serializable {
 	private String resourceName;
 	private String resourceType;
 
-	@OneToMany(mappedBy = "resourceVO")
+	@OneToMany(mappedBy = "resource")
 	private List<TaskVO> taskList;
 	private String resourceImage;
 	private String region;

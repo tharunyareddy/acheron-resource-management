@@ -36,7 +36,7 @@ public class CampaignController {
 		for(Campaign campaign:allCampaigns) {
 			 DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
 			//campaign.getProjects().addAll(campaign.getProjects());
-			 dozerBeanMapper.setMappingFiles(Arrays.asList("mapping\\project-mapper.xml"));
+			 dozerBeanMapper.setMappingFiles(Arrays.asList("mapping\\mapper.xml"));
 			 CampaignVO campaignVO = dozerBeanMapper.map(campaign, CampaignVO.class);
 			 campaignVOs.add(campaignVO);
 		 
