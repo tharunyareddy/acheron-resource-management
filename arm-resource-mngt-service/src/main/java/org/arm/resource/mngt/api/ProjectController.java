@@ -1,36 +1,47 @@
 package org.arm.resource.mngt.api;
 
-import java.sql.Timestamp;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-
-import org.arm.resource.mngt.entity.Priority;
 import org.arm.resource.mngt.entity.Project;
-import org.arm.resource.mngt.entity.Status;
 import org.arm.resource.mngt.service.IProjectService;
+import org.arm.resource.mngt.vo.ProjectVO;
+import org.dozer.DozerBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ProjectController {
-	
+
 	@Autowired
 	private IProjectService projectService;
-	
-	
+
 	@GetMapping("/project")
-	public List<Project> allProject(){
+	public List<Project> allProject() {
 		return projectService.getAllProject();
 	}
-	
+
 	@GetMapping("/project/id/{id}")
-	Project getById(@PathVariable("id")int id) {
+	Project getById(@PathVariable("id") int id) {
 		return projectService.getById(id);
 	}
-	
+
+	@GetMapping("/projectVO")
+	public List<ProjectVO> allProjectVO() {
+		List<ProjectVO> projectVOs = new ArrayList<ProjectVO>();
+		List<Project> allProjects = projectService.getAllProject();
+		for (Project project : allProjects) {
+			DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
+			dozerBeanMapper.setMappingFiles(Arrays.asList("mapping\\mapper.xml"));
+			ProjectVO projectVO = dozerBeanMapper.map(project, ProjectVO.class);
+			projectVOs.add(projectVO);
+
+		}
+		return projectVOs;
+	}
+
 //	@GetMapping("/project/create")
 //	public void createProject(){
 //		Project project = new Project();

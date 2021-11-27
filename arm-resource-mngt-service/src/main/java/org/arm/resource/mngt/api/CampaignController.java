@@ -3,9 +3,7 @@ package org.arm.resource.mngt.api;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import org.arm.resource.mngt.entity.Campaign;
-import org.arm.resource.mngt.entity.Project;
 import org.arm.resource.mngt.service.ICampaignService;
 import org.arm.resource.mngt.vo.CampaignVO;
 import org.dozer.DozerBeanMapper;
@@ -20,35 +18,35 @@ import org.springframework.web.bind.annotation.RestController;
 public class CampaignController {
 	@Autowired
 	private ICampaignService campaignService;
-	
+
 	Logger logger = LoggerFactory.getLogger(CampaignController.class);
-	
+
 	@GetMapping("/campaign")
-	public List<Campaign> allCampaign(){
+	public List<Campaign> allCampaign() {
 		return campaignService.getAllCampaign();
 	}
-	
+
 	@GetMapping("/campaignVO")
-	public List<CampaignVO> allCampaignVO(){
+	public List<CampaignVO> allCampaignVO() {
 		// DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
-		List<CampaignVO> campaignVOs=new ArrayList<CampaignVO>();
-		List<Campaign> allCampaigns=campaignService.getAllCampaign();
-		for(Campaign campaign:allCampaigns) {
-			 DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
-			//campaign.getProjects().addAll(campaign.getProjects());
-			 dozerBeanMapper.setMappingFiles(Arrays.asList("mapping\\mapper.xml"));
-			 CampaignVO campaignVO = dozerBeanMapper.map(campaign, CampaignVO.class);
-			 campaignVOs.add(campaignVO);
-		 
+		List<CampaignVO> campaignVOs = new ArrayList<CampaignVO>();
+		List<Campaign> allCampaigns = campaignService.getAllCampaign();
+		for (Campaign campaign : allCampaigns) {
+			DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
+			// campaign.getProjects().addAll(campaign.getProjects());
+			dozerBeanMapper.setMappingFiles(Arrays.asList("mapping\\mapper.xml"));
+			CampaignVO campaignVO = dozerBeanMapper.map(campaign, CampaignVO.class);
+			campaignVOs.add(campaignVO);
+
 		}
 		return campaignVOs;
 	}
-	
+
 	@GetMapping("/campaign/id/{id}")
-	public Campaign findById(@PathVariable("id")int id) {
+	public Campaign findById(@PathVariable("id") int id) {
 		return campaignService.findById(id);
 	}
-	
+
 //	@PostMapping("/campaign/create")
 //	public void createCampaign(){
 //		logger.info("Campaign logging");
