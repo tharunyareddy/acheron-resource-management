@@ -1,5 +1,6 @@
 package org.arm.resource.mngt.entity;
 
-public enum AvailableStatus {
+public enum AvailabilityStatus {
 	AVAILABLE,NOT_AVAILABLE
+
 }

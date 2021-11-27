@@ -1,7 +1,4 @@
-
-
 CREATE TABLE resource (
-
 leave_id int(11),
 resource_id int(11) NOT NULL AUTO_INCREMENT,
   available_id int(11),
@@ -14,4 +11,3 @@ resource_id int(11) NOT NULL AUTO_INCREMENT,
    FOREIGN KEY (available_id) REFERENCES availability(available_id),
 FOREIGN KEY (leave_id) REFERENCES leaves(leave_id)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
-

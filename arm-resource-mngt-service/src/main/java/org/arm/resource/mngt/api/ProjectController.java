@@ -25,19 +25,19 @@ public class ProjectController {
 		return projectService.getAllProject();
 	}
 	
-	@GetMapping("/project/create")
-	public void createProject(){
-		Project project = new Project();
-		// project.setCampaignId(1);
-		project.setCreateDate(new Timestamp(new Date().getTime()));
-		project.setEndDate(new Timestamp(new Date().getTime() + 15*86400 ));
-		project.setIsDeleted(0);
-		project.setStartDate(new Timestamp(new Date().getTime()));
-		project.setPriority(Priority.HIGH);
-		project.setProjectName("New Project");
-		project.setProjectOwner("Test");
-		project.setStatus(Status.IN_PROGRESS);
-		
-		projectService.save(project);
-	}
+//	@GetMapping("/project/create")
+//	public void createProject(){
+//		Project project = new Project();
+//		// project.setCampaignId(1);
+//		project.setCreateDate(new Timestamp(new Date().getTime()));
+//		project.setEndDate(new Timestamp(new Date().getTime() + 15*86400 ));
+//		project.setIsDeleted(0);
+//		project.setStartDate(new Timestamp(new Date().getTime()));
+//		project.setPriority(Priority.HIGH);
+//		project.setProjectName("New Project");
+//		project.setProjectOwner("Test");
+//		project.setStatus(Status.IN_PROGRESS);
+//		
+//		projectService.save(project);
+//	}
 }

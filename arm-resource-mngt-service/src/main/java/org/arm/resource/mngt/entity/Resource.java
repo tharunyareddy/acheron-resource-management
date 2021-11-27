@@ -21,10 +21,10 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Setter
-@Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 @ToString
 @JsonIdentityInfo(
 		   generator = ObjectIdGenerators.PropertyGenerator.class,
@@ -39,6 +39,7 @@ public class Resource {
 	private Timestamp createDate;
 	private Timestamp updateDate;
 	private int isDeleted;
+		
 	@OneToMany(mappedBy="resource")
 	private List<Task> taskList;
 	private String resourceImage;
@@ -48,51 +49,81 @@ public class Resource {
 	private Availability availability;
 	
 	@OneToOne
-	@JoinColumn(name="leave_id")
+	@JoinColumn(name="leaveId")
 	private Leaves leave;
-	
-	public int getResourceId() {
-		return resourceId;
-	}
-	public void setResourceId(int resourceId) {
-		this.resourceId = resourceId;
-	}
-	public String getResourceName() {
-		return resourceName;
-	}
-	public void setResourceName(String resourceName) {
-		this.resourceName = resourceName;
-	}
-	public String getResourceType() {
-		return resourceType;
-	}
-	public void setResourceType(String resourceType) {
-		this.resourceType = resourceType;
-	}
 
-	public Timestamp getCreateDate() {
-		return createDate;
-	}
-	public void setCreateDate(Timestamp createDate) {
-		this.createDate = createDate;
-	}
-	public Timestamp getUpdateDate() {
-		return updateDate;
-	}
-	public void setUpdateDate(Timestamp updateDate) {
-		this.updateDate = updateDate;
-	}
-	public int getIsDeleted() {
-		return isDeleted;
-	}
-	public void setIsDeleted(int isDeleted) {
-		this.isDeleted = isDeleted;
-	}
-	public List<Task> getTaskList() {
-		return taskList;
-	}
-	public void setTaskList(List<Task> taskList) {
-		this.taskList = taskList;
-	}
+
+//	public int getResourceId() {
+//		return resourceId;
+//	}
+//
+//	public void setResourceId(int resourceId) {
+//		this.resourceId = resourceId;
+//	}
+//
+//	public String getResourceName() {
+//		return resourceName;
+//	}
+//
+//	public void setResourceName(String resourceName) {
+//		this.resourceName = resourceName;
+//	}
+//
+//	public String getResourceType() {
+//		return resourceType;
+//	}
+//
+//	public void setResourceType(String resourceType) {
+//		this.resourceType = resourceType;
+//	}
+//
+//	public Timestamp getCreateDate() {
+//		return createDate;
+//	}
+//
+//	public void setCreateDate(Timestamp createDate) {
+//		this.createDate = createDate;
+//	}
+//
+//	public Timestamp getUpdateDate() {
+//		return updateDate;
+//	}
+//
+//	public void setUpdateDate(Timestamp updateDate) {
+//		this.updateDate = updateDate;
+//	}
+//
+//	public int getIsDeleted() {
+//		return isDeleted;
+//	}
+//
+//	public void setIsDeleted(int isDeleted) {
+//		this.isDeleted = isDeleted;
+//	}
+//
+//	public List<Task> getTaskList() {
+//		return taskList;
+//	}
+//
+//	public void setTaskList(List<Task> taskList) {
+//		this.taskList = taskList;
+//	}
+//
+//	public Availability getAvailability() {
+//		return availability;
+//	}
+//
+//	public void setAvailability(Availability availability) {
+//		this.availability = availability;
+//	}
+//
+//	public Leaves getLeave() {
+//		return leave;
+//	}
+//
+//	public void setLeave(Leaves leave) {
+//		this.leave = leave;
+//	}
+//	
 	
 }

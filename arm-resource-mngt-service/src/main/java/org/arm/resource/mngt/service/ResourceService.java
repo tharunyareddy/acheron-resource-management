@@ -4,24 +4,34 @@ import java.util.List;
 
 import org.arm.resource.mngt.entity.Resource;
 import org.arm.resource.mngt.repository.ResourceRepository;
+import org.arm.resource.mngt.entity.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ResourceService implements IResourceService{
-	
-	@Autowired
-	private ResourceRepository repourceRepository;
+public class ResourceService implements IResourceService {
 
-	
+	@Autowired
+	private ResourceRepository resourceRepository;
+
 	@Override
 	public void save(Resource resource) {
-		repourceRepository.save(resource);
+		resourceRepository.save(resource);
 	}
 
 	public List<Resource> findAll() {
-		return repourceRepository.findAll();
+		List<Resource> resourceList = resourceRepository.findAll();
+		if (resourceList.isEmpty())
+			throw new RuntimeException("Resource Not Available.. ");
+		return resourceList;
 	}
 
+	@Override
+	public List<Resource> findResourceWithoutTaskAssigned() {
 
+		List<Resource> allResource = resourceRepository.getResourceWithoutTaskAssigned();
+		if (allResource.isEmpty())
+			throw new RuntimeException("no resource Available.. ");
+		return allResource;
+	}
 }

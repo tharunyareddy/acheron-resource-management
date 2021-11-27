@@ -18,14 +18,12 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 @Entity
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 public class Project {
 
 	@Id
@@ -45,86 +43,21 @@ public class Project {
 	private String updatedBy;
 	
 	@ManyToOne
-	@JoinColumn(name="campaign_id")
+	@JoinColumn(name="campaignId")
 	@JsonBackReference
 	private Campaign campaign;
 	
 	@OneToMany(mappedBy="project")
 	@JsonManagedReference
 	private List<Task> tasks;
-	
-	public int getProjectId() {
-		return projectId;
-	}
-	public void setProjectId(int projectId) {
-		this.projectId = projectId;
-	}
-	public String getProjectName() {
-		return projectName;
-	}
-	public void setProjectName(String projectName) {
-		this.projectName = projectName;
-	}
-	public String getProjectOwner() {
-		return projectOwner;
-	}
-	public void setProjectOwner(String projectOwner) {
-		this.projectOwner = projectOwner;
-	}
-	public Timestamp getStartDate() {
-		return startDate;
-	}
-	public void setStartDate(Timestamp startDate) {
-		this.startDate = startDate;
-	}
-	public Timestamp getEndDate() {
-		return endDate;
-	}
-	public void setEndDate(Timestamp endDate) {
-		this.endDate = endDate;
-	}
-	public Priority getPriority() {
-		return priority;
-	}
-	public void setPriority(Priority priority) {
-		this.priority = priority;
-	}
-	public Status getStatus() {
-		return status;
-	}
-	public void setStatus(Status status) {
-		this.status = status;
-	}
-	public Timestamp getCreateDate() {
-		return createDate;
-	}
-	public void setCreateDate(Timestamp createDate) {
-		this.createDate = createDate;
-	}
-	public Timestamp getUpdateDate() {
-		return updateDate;
-	}
-	public void setUpdateDate(Timestamp updateDate) {
-		this.updateDate = updateDate;
-	}
-	public int getIsDeleted() {
-		return isDeleted;
-	}
-	public void setIsDeleted(int isDeleted) {
-		this.isDeleted = isDeleted;
+
+	@Override
+	public String toString() {
+		return "Project [projectId=" + projectId + ", projectName=" + projectName + ", projectOwner=" + projectOwner
+				+ ", startDate=" + startDate + ", endDate=" + endDate + ", priority=" + priority + ", status=" + status
+				+ ", createDate=" + createDate + ", updateDate=" + updateDate + ", isDeleted=" + isDeleted + "]";
 	}
 	
-	public Campaign getCampaign() {
-		return campaign;
-	}
-	public void setCampaign(Campaign campaign) {
-		this.campaign = campaign;
-	}
-	public List<Task> getTasks() {
-		return tasks;
-	}
-	public void setTasks(List<Task> tasks) {
-		this.tasks = tasks;
-	}
+	
 	
 }

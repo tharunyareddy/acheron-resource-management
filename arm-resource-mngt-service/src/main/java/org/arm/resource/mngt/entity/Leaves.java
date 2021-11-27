@@ -28,3 +28,4 @@ public class Leaves {
 	private Timestamp updateDate;
 	private int isDeleted;
 }
+
