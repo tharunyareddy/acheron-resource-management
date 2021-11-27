@@ -34,4 +34,9 @@ public class ResourceService implements IResourceService {
 			throw new RuntimeException("no resource Available.. ");
 		return allResource;
 	}
+
+	@Override
+	public Resource getById(int id) {
+		return resourceRepository.findById(id).get();
+	}
 }

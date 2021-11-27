@@ -13,7 +13,7 @@ public class CampaignService implements ICampaignService {
 	CampaignRepository campaignRepository;
 
 	public List<Campaign> getAllCampaign() {
-		campaignRepository.findAll().forEach(System.out::println);
+		//campaignRepository.findAll().forEach(System.out::println);
 		return campaignRepository.findAll();
 
 	}

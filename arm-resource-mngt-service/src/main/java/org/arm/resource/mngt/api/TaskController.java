@@ -26,6 +26,10 @@ public class TaskController {
 	public List<Task> allTask(){
 		return taskService.getAllTask();
 	}
+	@GetMapping("/task/id/{id}")
+	Task getById(@PathVariable("id")int id) {
+		return taskService.getById(id);
+	}
 	
 //	@GetMapping("/task/create")
 //	public void createTask(){

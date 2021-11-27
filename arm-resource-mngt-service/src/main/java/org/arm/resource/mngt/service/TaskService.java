@@ -35,4 +35,9 @@ public class TaskService implements ITaskService {
 			throw new RuntimeException("Duration is not available");
 		return taskDuration;
 	}
+
+	@Override
+	public Task getById(int id) {
+		return taskRepository.findById(id).get();
+	}
 }

@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,6 +26,11 @@ public class CampaignController {
 	@GetMapping("/campaign")
 	public List<Campaign> allCampaign(){
 		return campaignService.getAllCampaign();
+	}
+	
+	@GetMapping("/campaign/id/{id}")
+	public Campaign findById(@PathVariable("id")int id) {
+		return campaignService.findById(id);
 	}
 	
 //	@PostMapping("/campaign/create")

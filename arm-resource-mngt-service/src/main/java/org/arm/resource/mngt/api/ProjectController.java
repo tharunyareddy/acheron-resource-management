@@ -10,6 +10,7 @@ import org.arm.resource.mngt.entity.Status;
 import org.arm.resource.mngt.service.IProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,6 +24,11 @@ public class ProjectController {
 	@GetMapping("/project")
 	public List<Project> allProject(){
 		return projectService.getAllProject();
+	}
+	
+	@GetMapping("/project/id/{id}")
+	Project getById(@PathVariable("id")int id) {
+		return projectService.getById(id);
 	}
 	
 //	@GetMapping("/project/create")

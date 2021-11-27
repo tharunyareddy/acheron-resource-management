@@ -27,4 +27,9 @@ public class ProjectService implements IProjectService {
 		projectRepository.save(project);
 	}
 
+	@Override
+	public Project getById(int id) {
+		return projectRepository.findById(id).get();
+	}
+
 }
