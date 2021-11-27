@@ -444,3 +444,585 @@ java.lang.IllegalStateException: Optional int parameter 'id' is present but cann
 2021-11-28 01:50:08.429  INFO 8812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
 2021-11-28 01:50:08.724  INFO 8812 --- [main] org.arm.resource.mngt.ArmRMSApplication  : Started ArmRMSApplication in 9.221 seconds (JVM running for 9.746)
 2021-11-28 01:50:16.131  INFO 8812 --- [http-nio-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 01:50:16.134  INFO 8812 --- [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-28 01:50:16.137  INFO 8812 --- [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-11-28 02:13:37.265  INFO 21356 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2021-11-28 02:13:39.421  INFO 21356 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2021-11-28 02:13:39.423  WARN 21356 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/resource-mngt-service/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-11-28 02:13:39.427  INFO 21356 --- [main] org.arm.resource.mngt.ArmRMSApplication  : The following profiles are active: dev
+2021-11-28 02:13:40.028  INFO 21356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-28 02:13:40.260  INFO 21356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 216 ms. Found 4 JPA repository interfaces.
+2021-11-28 02:13:40.501  INFO 21356 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1af2baaf-df53-35c1-981c-bbc28dce3da8
+2021-11-28 02:13:41.179  INFO 21356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-28 02:13:41.196  INFO 21356 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-28 02:13:41.196  INFO 21356 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-11-28 02:13:41.398  INFO 21356 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-28 02:13:41.398  INFO 21356 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1956 ms
+2021-11-28 02:13:41.575  INFO 21356 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.7.3 by Redgate
+2021-11-28 02:13:41.587  INFO 21356 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-28 02:13:41.966  INFO 21356 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-28 02:13:42.016  INFO 21356 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:mysql://localhost:3306/arm (MySQL 8.0)
+2021-11-28 02:13:42.092  INFO 21356 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 15 migrations (execution time 00:00.047s)
+2021-11-28 02:13:42.110  INFO 21356 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `arm`: 1.2.4
+2021-11-28 02:13:42.111  INFO 21356 --- [main] o.f.core.internal.command.DbMigrate      : Schema `arm` is up to date. No migration necessary.
+2021-11-28 02:13:42.225  INFO 21356 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-28 02:13:42.298  INFO 21356 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-28 02:13:42.474  INFO 21356 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-28 02:13:42.632  INFO 21356 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-11-28 02:13:43.529  INFO 21356 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-28 02:13:43.538  INFO 21356 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 02:13:44.085  WARN 21356 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-28 02:13:44.830  INFO 21356 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2021-11-28 02:13:44.901  WARN 21356 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-11-28 02:13:44.943  INFO 21356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-28 02:13:45.309  INFO 21356 --- [main] org.arm.resource.mngt.ArmRMSApplication  : Started ArmRMSApplication in 9.852 seconds (JVM running for 10.454)
+2021-11-28 02:14:04.621  INFO 21356 --- [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 02:14:04.623  INFO 21356 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-28 02:14:04.627  INFO 21356 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-11-28 02:14:05.082  INFO 21356 --- [http-nio-8000-exec-1] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2021-11-28 02:14:05.096  WARN 21356 --- [http-nio-8000-exec-1] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-11-28 02:14:05.101  INFO 21356 --- [http-nio-8000-exec-1] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: http-nio-8000-exec-1
+2021-11-28 02:14:05.264  INFO 21356 --- [http-nio-8000-exec-1] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2021-11-28 02:14:05.267  INFO 21356 --- [http-nio-8000-exec-1] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2021-11-28 02:14:05.268  INFO 21356 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 02:14:05.475  INFO 21356 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 02:29:19.536  INFO 16208 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2021-11-28 02:29:21.711  INFO 16208 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2021-11-28 02:29:21.712  WARN 16208 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/resource-mngt-service/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-11-28 02:29:21.716  INFO 16208 --- [main] org.arm.resource.mngt.ArmRMSApplication  : The following profiles are active: dev
+2021-11-28 02:29:22.342  INFO 16208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-28 02:29:22.569  INFO 16208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 213 ms. Found 4 JPA repository interfaces.
+2021-11-28 02:29:22.817  INFO 16208 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1af2baaf-df53-35c1-981c-bbc28dce3da8
+2021-11-28 02:29:23.489  INFO 16208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-28 02:29:23.502  INFO 16208 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-28 02:29:23.503  INFO 16208 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-11-28 02:29:23.705  INFO 16208 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-28 02:29:23.705  INFO 16208 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1974 ms
+2021-11-28 02:29:23.867  INFO 16208 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.7.3 by Redgate
+2021-11-28 02:29:23.878  INFO 16208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-28 02:29:24.330  INFO 16208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-28 02:29:24.386  INFO 16208 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:mysql://localhost:3306/arm (MySQL 8.0)
+2021-11-28 02:29:24.460  INFO 16208 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 15 migrations (execution time 00:00.045s)
+2021-11-28 02:29:24.481  INFO 16208 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `arm`: 1.2.4
+2021-11-28 02:29:24.482  INFO 16208 --- [main] o.f.core.internal.command.DbMigrate      : Schema `arm` is up to date. No migration necessary.
+2021-11-28 02:29:24.589  INFO 16208 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-28 02:29:24.676  INFO 16208 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-28 02:29:24.865  INFO 16208 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-28 02:29:25.006  INFO 16208 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-11-28 02:29:25.983  INFO 16208 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-28 02:29:25.994  INFO 16208 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 02:29:26.594  WARN 16208 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-28 02:29:27.406  INFO 16208 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2021-11-28 02:29:27.465  WARN 16208 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-11-28 02:29:27.513  INFO 16208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-28 02:29:27.852  INFO 16208 --- [main] org.arm.resource.mngt.ArmRMSApplication  : Started ArmRMSApplication in 10.246 seconds (JVM running for 10.892)
+2021-11-28 02:29:33.713  INFO 16208 --- [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 02:29:33.716  INFO 16208 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-28 02:29:33.718  INFO 16208 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-11-28 02:29:34.204  INFO 16208 --- [http-nio-8000-exec-1] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2021-11-28 02:29:34.219  WARN 16208 --- [http-nio-8000-exec-1] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-11-28 02:29:34.224  INFO 16208 --- [http-nio-8000-exec-1] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: http-nio-8000-exec-1
+2021-11-28 02:29:34.371  INFO 16208 --- [http-nio-8000-exec-1] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2021-11-28 02:29:34.374  INFO 16208 --- [http-nio-8000-exec-1] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2021-11-28 02:29:34.376  INFO 16208 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 02:29:34.595  INFO 16208 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 03:21:36.324  INFO 13600 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2021-11-28 03:21:38.528  INFO 13600 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2021-11-28 03:21:38.529  WARN 13600 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/resource-mngt-service/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-11-28 03:21:38.535  INFO 13600 --- [main] org.arm.resource.mngt.ArmRMSApplication  : The following profiles are active: dev
+2021-11-28 03:21:39.245  INFO 13600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-28 03:21:39.518  INFO 13600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 260 ms. Found 4 JPA repository interfaces.
+2021-11-28 03:21:39.802  INFO 13600 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1af2baaf-df53-35c1-981c-bbc28dce3da8
+2021-11-28 03:21:40.539  INFO 13600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-28 03:21:40.555  INFO 13600 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-28 03:21:40.556  INFO 13600 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-11-28 03:21:40.762  INFO 13600 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-28 03:21:40.763  INFO 13600 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2211 ms
+2021-11-28 03:21:40.956  INFO 13600 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.7.3 by Redgate
+2021-11-28 03:21:40.966  INFO 13600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-28 03:21:41.434  INFO 13600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-28 03:21:41.493  INFO 13600 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:mysql://localhost:3306/arm (MySQL 8.0)
+2021-11-28 03:21:41.579  INFO 13600 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 15 migrations (execution time 00:00.050s)
+2021-11-28 03:21:41.602  INFO 13600 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `arm`: 1.2.4
+2021-11-28 03:21:41.604  INFO 13600 --- [main] o.f.core.internal.command.DbMigrate      : Schema `arm` is up to date. No migration necessary.
+2021-11-28 03:21:41.728  INFO 13600 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-28 03:21:41.836  INFO 13600 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-28 03:21:42.039  INFO 13600 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-28 03:21:42.195  INFO 13600 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-11-28 03:21:43.274  INFO 13600 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-28 03:21:43.289  INFO 13600 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 03:21:43.958  WARN 13600 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-28 03:21:44.829  INFO 13600 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2021-11-28 03:21:44.890  WARN 13600 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-11-28 03:21:44.937  INFO 13600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-28 03:21:45.426  INFO 13600 --- [main] org.arm.resource.mngt.ArmRMSApplication  : Started ArmRMSApplication in 11.184 seconds (JVM running for 11.887)
+2021-11-28 03:21:56.088  INFO 13600 --- [http-nio-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 03:21:56.091  INFO 13600 --- [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-28 03:21:56.094  INFO 13600 --- [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-11-28 03:21:56.169  INFO 13600 --- [http-nio-8000-exec-2] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2021-11-28 03:21:56.182  WARN 13600 --- [http-nio-8000-exec-2] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-11-28 03:21:56.187  INFO 13600 --- [http-nio-8000-exec-2] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: http-nio-8000-exec-2
+2021-11-28 03:21:56.322  INFO 13600 --- [http-nio-8000-exec-2] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2021-11-28 03:21:56.324  INFO 13600 --- [http-nio-8000-exec-2] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2021-11-28 03:21:56.326  INFO 13600 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 03:21:56.873  INFO 13600 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Using the following xml files to load custom mappings for the bean mapper instance: [/arm-resource-mngt-service/src/main/resources/project-mapper.xml]
+2021-11-28 03:21:56.873  INFO 13600 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Trying to find xml mapping file: /arm-resource-mngt-service/src/main/resources/project-mapper.xml
+2021-11-28 03:21:56.893 ERROR 13600 --- [http-nio-8000-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.dozer.MappingException: Unable to locate dozer mapping file [/arm-resource-mngt-service/src/main/resources/project-mapper.xml] in the classpath!] with root cause
+
+org.dozer.MappingException: Unable to locate dozer mapping file [/arm-resource-mngt-service/src/main/resources/project-mapper.xml] in the classpath!
+	at org.dozer.util.MappingUtils.throwMappingException(MappingUtils.java:87) ~[dozer-5.5.1.jar:na]
+	at org.dozer.util.MappingValidator.validateURL(MappingValidator.java:63) ~[dozer-5.5.1.jar:na]
+	at org.dozer.DozerBeanMapper.loadFromFiles(DozerBeanMapper.java:225) ~[dozer-5.5.1.jar:na]
+	at org.dozer.DozerBeanMapper.loadCustomMappings(DozerBeanMapper.java:209) ~[dozer-5.5.1.jar:na]
+	at org.dozer.DozerBeanMapper.initMappings(DozerBeanMapper.java:315) ~[dozer-5.5.1.jar:na]
+	at org.dozer.DozerBeanMapper.getMappingProcessor(DozerBeanMapper.java:192) ~[dozer-5.5.1.jar:na]
+	at org.dozer.DozerBeanMapper.map(DozerBeanMapper.java:120) ~[dozer-5.5.1.jar:na]
+	at org.arm.resource.mngt.api.CampaignController.allCampaignVO(CampaignController.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.52.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.52.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2021-11-28 03:23:52.138  INFO 20784 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2021-11-28 03:23:54.293  INFO 20784 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2021-11-28 03:23:54.293  WARN 20784 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/resource-mngt-service/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-11-28 03:23:54.297  INFO 20784 --- [main] org.arm.resource.mngt.ArmRMSApplication  : The following profiles are active: dev
+2021-11-28 03:23:54.951  INFO 20784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-28 03:23:55.200  INFO 20784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 235 ms. Found 4 JPA repository interfaces.
+2021-11-28 03:23:55.491  INFO 20784 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1af2baaf-df53-35c1-981c-bbc28dce3da8
+2021-11-28 03:23:56.313  INFO 20784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-28 03:23:56.326  INFO 20784 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-28 03:23:56.327  INFO 20784 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-11-28 03:23:56.561  INFO 20784 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-28 03:23:56.561  INFO 20784 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2246 ms
+2021-11-28 03:23:56.744  INFO 20784 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.7.3 by Redgate
+2021-11-28 03:23:56.760  INFO 20784 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-28 03:23:57.257  INFO 20784 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-28 03:23:57.343  INFO 20784 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:mysql://localhost:3306/arm (MySQL 8.0)
+2021-11-28 03:23:57.436  INFO 20784 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 15 migrations (execution time 00:00.052s)
+2021-11-28 03:23:57.457  INFO 20784 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `arm`: 1.2.4
+2021-11-28 03:23:57.458  INFO 20784 --- [main] o.f.core.internal.command.DbMigrate      : Schema `arm` is up to date. No migration necessary.
+2021-11-28 03:23:57.584  INFO 20784 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-28 03:23:57.679  INFO 20784 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-28 03:23:57.867  INFO 20784 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-28 03:23:58.059  INFO 20784 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-11-28 03:23:59.054  INFO 20784 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-28 03:23:59.066  INFO 20784 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 03:23:59.738  WARN 20784 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-28 03:24:00.727  INFO 20784 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2021-11-28 03:24:00.808  WARN 20784 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-11-28 03:24:00.873  INFO 20784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-28 03:24:01.274  INFO 20784 --- [main] org.arm.resource.mngt.ArmRMSApplication  : Started ArmRMSApplication in 11.184 seconds (JVM running for 11.923)
+2021-11-28 03:24:05.566  INFO 20784 --- [http-nio-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 03:24:05.569  INFO 20784 --- [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-28 03:24:05.573  INFO 20784 --- [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-11-28 03:24:05.651  INFO 20784 --- [http-nio-8000-exec-2] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2021-11-28 03:24:05.666  WARN 20784 --- [http-nio-8000-exec-2] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-11-28 03:24:05.671  INFO 20784 --- [http-nio-8000-exec-2] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: http-nio-8000-exec-2
+2021-11-28 03:24:05.795  INFO 20784 --- [http-nio-8000-exec-2] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2021-11-28 03:24:05.797  INFO 20784 --- [http-nio-8000-exec-2] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2021-11-28 03:24:05.799  INFO 20784 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 03:24:06.325  INFO 20784 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Using the following xml files to load custom mappings for the bean mapper instance: [\project-mapper.xml]
+2021-11-28 03:24:06.326  INFO 20784 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Trying to find xml mapping file: \project-mapper.xml
+2021-11-28 03:24:06.328  INFO 20784 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Using URL [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/%5cproject-mapper.xml] to load custom xml mappings
+2021-11-28 03:24:06.513  INFO 20784 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Successfully loaded custom xml mappings from URL: [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/%5cproject-mapper.xml]
+2021-11-28 03:24:06.695 ERROR 20784 --- [http-nio-8000-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.dozer.MappingException: Dozer Bean Mapper is already initialized! Modify settings before calling map()] with root cause
+
+org.dozer.MappingException: Dozer Bean Mapper is already initialized! Modify settings before calling map()
+	at org.dozer.DozerBeanMapper.checkIfInitialized(DozerBeanMapper.java:308) ~[dozer-5.5.1.jar:na]
+	at org.dozer.DozerBeanMapper.setMappingFiles(DozerBeanMapper.java:148) ~[dozer-5.5.1.jar:na]
+	at org.arm.resource.mngt.api.CampaignController.allCampaignVO(CampaignController.java:38) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.52.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.52.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2021-11-28 03:29:12.359  INFO 12684 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2021-11-28 03:29:14.518  INFO 12684 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2021-11-28 03:29:14.519  WARN 12684 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/resource-mngt-service/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-11-28 03:29:14.523  INFO 12684 --- [main] org.arm.resource.mngt.ArmRMSApplication  : The following profiles are active: dev
+2021-11-28 03:29:15.213  INFO 12684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-28 03:29:15.475  INFO 12684 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 249 ms. Found 4 JPA repository interfaces.
+2021-11-28 03:29:15.753  INFO 12684 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1af2baaf-df53-35c1-981c-bbc28dce3da8
+2021-11-28 03:29:16.512  INFO 12684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-28 03:29:16.527  INFO 12684 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-28 03:29:16.528  INFO 12684 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-11-28 03:29:16.752  INFO 12684 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-28 03:29:16.753  INFO 12684 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2212 ms
+2021-11-28 03:29:16.925  INFO 12684 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.7.3 by Redgate
+2021-11-28 03:29:16.936  INFO 12684 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-28 03:29:17.369  INFO 12684 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-28 03:29:17.455  INFO 12684 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:mysql://localhost:3306/arm (MySQL 8.0)
+2021-11-28 03:29:17.555  INFO 12684 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 15 migrations (execution time 00:00.055s)
+2021-11-28 03:29:17.573  INFO 12684 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `arm`: 1.2.4
+2021-11-28 03:29:17.575  INFO 12684 --- [main] o.f.core.internal.command.DbMigrate      : Schema `arm` is up to date. No migration necessary.
+2021-11-28 03:29:17.699  INFO 12684 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-28 03:29:17.792  INFO 12684 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-28 03:29:17.995  INFO 12684 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-28 03:29:18.183  INFO 12684 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-11-28 03:29:19.250  INFO 12684 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-28 03:29:19.259  INFO 12684 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 03:29:19.905  WARN 12684 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-28 03:29:20.752  INFO 12684 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2021-11-28 03:29:20.821  WARN 12684 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-11-28 03:29:20.871  INFO 12684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-28 03:29:21.255  INFO 12684 --- [main] org.arm.resource.mngt.ArmRMSApplication  : Started ArmRMSApplication in 10.957 seconds (JVM running for 11.661)
+2021-11-28 03:29:26.448  INFO 12684 --- [http-nio-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 03:29:26.452  INFO 12684 --- [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-28 03:29:26.455  INFO 12684 --- [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-11-28 03:29:26.965  INFO 12684 --- [http-nio-8000-exec-2] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2021-11-28 03:29:26.981  WARN 12684 --- [http-nio-8000-exec-2] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-11-28 03:29:26.985  INFO 12684 --- [http-nio-8000-exec-2] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: http-nio-8000-exec-2
+2021-11-28 03:29:27.114  INFO 12684 --- [http-nio-8000-exec-2] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2021-11-28 03:29:27.116  INFO 12684 --- [http-nio-8000-exec-2] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2021-11-28 03:29:27.118  INFO 12684 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 03:29:27.216  INFO 12684 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Using the following xml files to load custom mappings for the bean mapper instance: [\project-mapper.xml]
+2021-11-28 03:29:27.217  INFO 12684 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Trying to find xml mapping file: \project-mapper.xml
+2021-11-28 03:29:27.219  INFO 12684 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Using URL [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/%5cproject-mapper.xml] to load custom xml mappings
+2021-11-28 03:29:27.382  INFO 12684 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Successfully loaded custom xml mappings from URL: [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/%5cproject-mapper.xml]
+2021-11-28 03:29:27.522  INFO 12684 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 03:29:27.531  INFO 12684 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Using the following xml files to load custom mappings for the bean mapper instance: [\project-mapper.xml]
+2021-11-28 03:29:27.532  INFO 12684 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Trying to find xml mapping file: \project-mapper.xml
+2021-11-28 03:29:27.533  INFO 12684 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Using URL [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/%5cproject-mapper.xml] to load custom xml mappings
+2021-11-28 03:29:27.563  INFO 12684 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Successfully loaded custom xml mappings from URL: [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/%5cproject-mapper.xml]
+2021-11-28 03:33:20.768  INFO 5904 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2021-11-28 03:33:22.976  INFO 5904 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2021-11-28 03:33:22.978  WARN 5904 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/resource-mngt-service/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-11-28 03:33:22.983  INFO 5904 --- [main] org.arm.resource.mngt.ArmRMSApplication  : The following profiles are active: dev
+2021-11-28 03:33:23.686  INFO 5904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-28 03:33:23.948  INFO 5904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 252 ms. Found 4 JPA repository interfaces.
+2021-11-28 03:33:24.213  INFO 5904 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1af2baaf-df53-35c1-981c-bbc28dce3da8
+2021-11-28 03:33:25.022  INFO 5904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-28 03:33:25.034  INFO 5904 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-28 03:33:25.035  INFO 5904 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-11-28 03:33:25.242  INFO 5904 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-28 03:33:25.242  INFO 5904 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2244 ms
+2021-11-28 03:33:25.428  INFO 5904 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.7.3 by Redgate
+2021-11-28 03:33:25.441  INFO 5904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-28 03:33:25.880  INFO 5904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-28 03:33:25.953  INFO 5904 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:mysql://localhost:3306/arm (MySQL 8.0)
+2021-11-28 03:33:26.047  INFO 5904 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 15 migrations (execution time 00:00.059s)
+2021-11-28 03:33:26.067  INFO 5904 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `arm`: 1.2.4
+2021-11-28 03:33:26.068  INFO 5904 --- [main] o.f.core.internal.command.DbMigrate      : Schema `arm` is up to date. No migration necessary.
+2021-11-28 03:33:26.189  INFO 5904 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-28 03:33:26.291  INFO 5904 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-28 03:33:26.484  INFO 5904 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-28 03:33:26.664  INFO 5904 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-11-28 03:33:27.799  INFO 5904 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-28 03:33:27.811  INFO 5904 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 03:33:28.459  WARN 5904 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-28 03:33:29.255  INFO 5904 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2021-11-28 03:33:29.315  WARN 5904 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-11-28 03:33:29.358  INFO 5904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-28 03:33:29.795  INFO 5904 --- [main] org.arm.resource.mngt.ArmRMSApplication  : Started ArmRMSApplication in 11.087 seconds (JVM running for 11.804)
+2021-11-28 03:33:36.687  INFO 5904 --- [http-nio-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 03:33:36.689  INFO 5904 --- [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-28 03:33:36.692  INFO 5904 --- [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-11-28 03:33:37.196  INFO 5904 --- [http-nio-8000-exec-2] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2021-11-28 03:33:37.214  WARN 5904 --- [http-nio-8000-exec-2] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-11-28 03:33:37.221  INFO 5904 --- [http-nio-8000-exec-2] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: http-nio-8000-exec-2
+2021-11-28 03:33:37.375  INFO 5904 --- [http-nio-8000-exec-2] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2021-11-28 03:33:37.377  INFO 5904 --- [http-nio-8000-exec-2] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2021-11-28 03:33:37.379  INFO 5904 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 03:33:37.487  INFO 5904 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Using the following xml files to load custom mappings for the bean mapper instance: [mapping\project-mapper.xml]
+2021-11-28 03:33:37.488  INFO 5904 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Trying to find xml mapping file: mapping\project-mapper.xml
+2021-11-28 03:33:37.490  INFO 5904 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Using URL [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml] to load custom xml mappings
+2021-11-28 03:33:37.674  INFO 5904 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Successfully loaded custom xml mappings from URL: [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml]
+2021-11-28 03:33:37.810  INFO 5904 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 03:33:37.821  INFO 5904 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Using the following xml files to load custom mappings for the bean mapper instance: [mapping\project-mapper.xml]
+2021-11-28 03:33:37.821  INFO 5904 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Trying to find xml mapping file: mapping\project-mapper.xml
+2021-11-28 03:33:37.822  INFO 5904 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Using URL [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml] to load custom xml mappings
+2021-11-28 03:33:37.850  INFO 5904 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Successfully loaded custom xml mappings from URL: [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml]
+2021-11-28 03:39:48.611  INFO 5904 --- [http-nio-8000-exec-8] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 03:39:48.615  INFO 5904 --- [http-nio-8000-exec-8] org.dozer.DozerBeanMapper                : Using the following xml files to load custom mappings for the bean mapper instance: [mapping\project-mapper.xml]
+2021-11-28 03:39:48.616  INFO 5904 --- [http-nio-8000-exec-8] org.dozer.DozerBeanMapper                : Trying to find xml mapping file: mapping\project-mapper.xml
+2021-11-28 03:39:48.616  INFO 5904 --- [http-nio-8000-exec-8] org.dozer.DozerBeanMapper                : Using URL [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml] to load custom xml mappings
+2021-11-28 03:39:48.629  INFO 5904 --- [http-nio-8000-exec-8] org.dozer.DozerBeanMapper                : Successfully loaded custom xml mappings from URL: [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml]
+2021-11-28 03:39:48.636  INFO 5904 --- [http-nio-8000-exec-8] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 03:39:48.639  INFO 5904 --- [http-nio-8000-exec-8] org.dozer.DozerBeanMapper                : Using the following xml files to load custom mappings for the bean mapper instance: [mapping\project-mapper.xml]
+2021-11-28 03:39:48.640  INFO 5904 --- [http-nio-8000-exec-8] org.dozer.DozerBeanMapper                : Trying to find xml mapping file: mapping\project-mapper.xml
+2021-11-28 03:39:48.641  INFO 5904 --- [http-nio-8000-exec-8] org.dozer.DozerBeanMapper                : Using URL [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml] to load custom xml mappings
+2021-11-28 03:39:48.651  INFO 5904 --- [http-nio-8000-exec-8] org.dozer.DozerBeanMapper                : Successfully loaded custom xml mappings from URL: [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml]
+2021-11-28 03:41:50.193  INFO 1392 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2021-11-28 03:41:52.358  INFO 1392 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2021-11-28 03:41:52.359  WARN 1392 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/resource-mngt-service/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-11-28 03:41:52.364  INFO 1392 --- [main] org.arm.resource.mngt.ArmRMSApplication  : The following profiles are active: dev
+2021-11-28 03:41:53.093  INFO 1392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-28 03:41:53.367  INFO 1392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 258 ms. Found 4 JPA repository interfaces.
+2021-11-28 03:41:53.649  INFO 1392 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1af2baaf-df53-35c1-981c-bbc28dce3da8
+2021-11-28 03:41:54.433  INFO 1392 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-28 03:41:54.444  INFO 1392 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-28 03:41:54.445  INFO 1392 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-11-28 03:41:54.653  INFO 1392 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-28 03:41:54.653  INFO 1392 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2251 ms
+2021-11-28 03:41:54.847  INFO 1392 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.7.3 by Redgate
+2021-11-28 03:41:54.859  INFO 1392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-28 03:41:55.350  INFO 1392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-28 03:41:55.427  INFO 1392 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:mysql://localhost:3306/arm (MySQL 8.0)
+2021-11-28 03:41:55.528  INFO 1392 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 15 migrations (execution time 00:00.062s)
+2021-11-28 03:41:55.550  INFO 1392 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `arm`: 1.2.4
+2021-11-28 03:41:55.551  INFO 1392 --- [main] o.f.core.internal.command.DbMigrate      : Schema `arm` is up to date. No migration necessary.
+2021-11-28 03:41:55.677  INFO 1392 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-28 03:41:55.782  INFO 1392 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-28 03:41:55.969  INFO 1392 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-28 03:41:56.136  INFO 1392 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-11-28 03:41:57.136  INFO 1392 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-28 03:41:57.148  INFO 1392 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 03:41:57.779  WARN 1392 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-28 03:41:58.709  INFO 1392 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2021-11-28 03:41:58.793  WARN 1392 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-11-28 03:41:58.850  INFO 1392 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-28 03:41:59.273  INFO 1392 --- [main] org.arm.resource.mngt.ArmRMSApplication  : Started ArmRMSApplication in 11.259 seconds (JVM running for 11.969)
+2021-11-28 03:42:05.823  INFO 1392 --- [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 03:42:05.826  INFO 1392 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-28 03:42:05.829  INFO 1392 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-11-28 03:42:06.360  INFO 1392 --- [http-nio-8000-exec-1] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2021-11-28 03:42:06.376  WARN 1392 --- [http-nio-8000-exec-1] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-11-28 03:42:06.381  INFO 1392 --- [http-nio-8000-exec-1] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: http-nio-8000-exec-1
+2021-11-28 03:42:06.525  INFO 1392 --- [http-nio-8000-exec-1] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2021-11-28 03:42:06.527  INFO 1392 --- [http-nio-8000-exec-1] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2021-11-28 03:42:06.530  INFO 1392 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 03:42:06.629  INFO 1392 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Using the following xml files to load custom mappings for the bean mapper instance: [mapping\project-mapper.xml]
+2021-11-28 03:42:06.631  INFO 1392 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Trying to find xml mapping file: mapping\project-mapper.xml
+2021-11-28 03:42:06.634  INFO 1392 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Using URL [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml] to load custom xml mappings
+2021-11-28 03:42:06.803  INFO 1392 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Successfully loaded custom xml mappings from URL: [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml]
+2021-11-28 03:42:06.972  INFO 1392 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 03:42:06.982  INFO 1392 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Using the following xml files to load custom mappings for the bean mapper instance: [mapping\project-mapper.xml]
+2021-11-28 03:42:06.982  INFO 1392 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Trying to find xml mapping file: mapping\project-mapper.xml
+2021-11-28 03:42:06.983  INFO 1392 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Using URL [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml] to load custom xml mappings
+2021-11-28 03:42:07.014  INFO 1392 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Successfully loaded custom xml mappings from URL: [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml]
+2021-11-28 03:50:12.005  INFO 20784 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2021-11-28 03:50:14.146  INFO 20784 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2021-11-28 03:50:14.147  WARN 20784 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/resource-mngt-service/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-11-28 03:50:14.150  INFO 20784 --- [main] org.arm.resource.mngt.ArmRMSApplication  : The following profiles are active: dev
+2021-11-28 03:50:14.575  INFO 20784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-28 03:50:14.729  INFO 20784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 146 ms. Found 4 JPA repository interfaces.
+2021-11-28 03:50:14.891  INFO 20784 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1af2baaf-df53-35c1-981c-bbc28dce3da8
+2021-11-28 03:50:15.383  INFO 20784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-28 03:50:15.394  INFO 20784 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-28 03:50:15.394  INFO 20784 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-11-28 03:50:15.518  INFO 20784 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-28 03:50:15.518  INFO 20784 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1358 ms
+2021-11-28 03:50:15.641  INFO 20784 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.7.3 by Redgate
+2021-11-28 03:50:15.650  INFO 20784 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-28 03:50:15.937  INFO 20784 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-28 03:50:15.979  INFO 20784 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:mysql://localhost:3306/arm (MySQL 8.0)
+2021-11-28 03:50:16.048  INFO 20784 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 15 migrations (execution time 00:00.046s)
+2021-11-28 03:50:16.064  INFO 20784 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `arm`: 1.2.4
+2021-11-28 03:50:16.065  INFO 20784 --- [main] o.f.core.internal.command.DbMigrate      : Schema `arm` is up to date. No migration necessary.
+2021-11-28 03:50:16.155  INFO 20784 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-28 03:50:16.224  INFO 20784 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-28 03:50:16.350  INFO 20784 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-28 03:50:16.458  INFO 20784 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-11-28 03:50:17.130  INFO 20784 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-28 03:50:17.137  INFO 20784 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 03:50:17.562  WARN 20784 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-28 03:50:18.141  INFO 20784 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2021-11-28 03:50:18.187  WARN 20784 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-11-28 03:50:18.226  INFO 20784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-28 03:50:18.531  INFO 20784 --- [main] org.arm.resource.mngt.ArmRMSApplication  : Started ArmRMSApplication in 7.931 seconds (JVM running for 8.318)
+2021-11-28 03:50:23.731  INFO 20784 --- [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 03:50:23.732  INFO 20784 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-28 03:50:23.733  INFO 20784 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-11-28 03:50:23.948  INFO 20784 --- [http-nio-8000-exec-1] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2021-11-28 03:50:23.956  WARN 20784 --- [http-nio-8000-exec-1] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-11-28 03:50:23.958  INFO 20784 --- [http-nio-8000-exec-1] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: http-nio-8000-exec-1
+2021-11-28 03:50:24.026  INFO 20784 --- [http-nio-8000-exec-1] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2021-11-28 03:50:24.028  INFO 20784 --- [http-nio-8000-exec-1] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2021-11-28 03:50:24.029  INFO 20784 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 03:50:24.072  INFO 20784 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Using the following xml files to load custom mappings for the bean mapper instance: [mapping\project-mapper.xml]
+2021-11-28 03:50:24.073  INFO 20784 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Trying to find xml mapping file: mapping\project-mapper.xml
+2021-11-28 03:50:24.075  INFO 20784 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Using URL [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml] to load custom xml mappings
+2021-11-28 03:50:24.162  INFO 20784 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Successfully loaded custom xml mappings from URL: [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml]
+2021-11-28 03:50:24.254  INFO 20784 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 03:50:24.260  INFO 20784 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Using the following xml files to load custom mappings for the bean mapper instance: [mapping\project-mapper.xml]
+2021-11-28 03:50:24.260  INFO 20784 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Trying to find xml mapping file: mapping\project-mapper.xml
+2021-11-28 03:50:24.260  INFO 20784 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Using URL [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml] to load custom xml mappings
+2021-11-28 03:50:24.270  INFO 20784 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Successfully loaded custom xml mappings from URL: [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml]
+2021-11-28 03:52:26.508  INFO 20852 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2021-11-28 03:52:28.628  INFO 20852 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2021-11-28 03:52:28.629  WARN 20852 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/resource-mngt-service/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-11-28 03:52:28.632  INFO 20852 --- [main] org.arm.resource.mngt.ArmRMSApplication  : The following profiles are active: dev
+2021-11-28 03:52:29.072  INFO 20852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-28 03:52:29.228  INFO 20852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 4 JPA repository interfaces.
+2021-11-28 03:52:29.388  INFO 20852 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1af2baaf-df53-35c1-981c-bbc28dce3da8
+2021-11-28 03:52:29.894  INFO 20852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-28 03:52:29.902  INFO 20852 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-28 03:52:29.902  INFO 20852 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-11-28 03:52:30.061  INFO 20852 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-28 03:52:30.062  INFO 20852 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1420 ms
+2021-11-28 03:52:30.172  INFO 20852 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.7.3 by Redgate
+2021-11-28 03:52:30.180  INFO 20852 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-28 03:52:30.474  INFO 20852 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-28 03:52:30.517  INFO 20852 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:mysql://localhost:3306/arm (MySQL 8.0)
+2021-11-28 03:52:30.565  INFO 20852 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 15 migrations (execution time 00:00.027s)
+2021-11-28 03:52:30.576  INFO 20852 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `arm`: 1.2.4
+2021-11-28 03:52:30.577  INFO 20852 --- [main] o.f.core.internal.command.DbMigrate      : Schema `arm` is up to date. No migration necessary.
+2021-11-28 03:52:30.660  INFO 20852 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-28 03:52:30.719  INFO 20852 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-28 03:52:30.845  INFO 20852 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-28 03:52:30.968  INFO 20852 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-11-28 03:52:31.621  INFO 20852 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-28 03:52:31.628  INFO 20852 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 03:52:32.029  WARN 20852 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-28 03:52:32.627  INFO 20852 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2021-11-28 03:52:32.687  WARN 20852 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-11-28 03:52:32.717  INFO 20852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-28 03:52:32.999  INFO 20852 --- [main] org.arm.resource.mngt.ArmRMSApplication  : Started ArmRMSApplication in 7.84 seconds (JVM running for 8.246)
+2021-11-28 03:52:47.280  INFO 20852 --- [http-nio-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 03:52:47.281  INFO 20852 --- [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-28 03:52:47.282  INFO 20852 --- [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-11-28 03:52:47.480  INFO 20852 --- [http-nio-8000-exec-2] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2021-11-28 03:52:47.486  WARN 20852 --- [http-nio-8000-exec-2] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-11-28 03:52:47.488  INFO 20852 --- [http-nio-8000-exec-2] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: http-nio-8000-exec-2
+2021-11-28 03:52:47.599  INFO 20852 --- [http-nio-8000-exec-2] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2021-11-28 03:52:47.601  INFO 20852 --- [http-nio-8000-exec-2] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2021-11-28 03:52:47.602  INFO 20852 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 03:52:47.672  INFO 20852 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Using the following xml files to load custom mappings for the bean mapper instance: [mapping\project-mapper.xml]
+2021-11-28 03:52:47.672  INFO 20852 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Trying to find xml mapping file: mapping\project-mapper.xml
+2021-11-28 03:52:47.673  INFO 20852 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Using URL [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml] to load custom xml mappings
+2021-11-28 03:52:47.752  INFO 20852 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Successfully loaded custom xml mappings from URL: [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml]
+2021-11-28 03:52:47.823  INFO 20852 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 03:52:47.828  INFO 20852 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Using the following xml files to load custom mappings for the bean mapper instance: [mapping\project-mapper.xml]
+2021-11-28 03:52:47.828  INFO 20852 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Trying to find xml mapping file: mapping\project-mapper.xml
+2021-11-28 03:52:47.829  INFO 20852 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Using URL [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml] to load custom xml mappings
+2021-11-28 03:52:47.838  INFO 20852 --- [http-nio-8000-exec-2] org.dozer.DozerBeanMapper                : Successfully loaded custom xml mappings from URL: [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml]
+2021-11-28 03:53:16.973  INFO 23892 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2021-11-28 03:53:19.102  INFO 23892 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2021-11-28 03:53:19.103  WARN 23892 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/resource-mngt-service/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-11-28 03:53:19.107  INFO 23892 --- [main] org.arm.resource.mngt.ArmRMSApplication  : The following profiles are active: dev
+2021-11-28 03:53:19.569  INFO 23892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-28 03:53:19.739  INFO 23892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 162 ms. Found 4 JPA repository interfaces.
+2021-11-28 03:53:19.926  INFO 23892 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1af2baaf-df53-35c1-981c-bbc28dce3da8
+2021-11-28 03:53:20.432  INFO 23892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-28 03:53:20.444  INFO 23892 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-28 03:53:20.445  INFO 23892 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-11-28 03:53:20.579  INFO 23892 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-28 03:53:20.580  INFO 23892 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1463 ms
+2021-11-28 03:53:20.698  INFO 23892 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.7.3 by Redgate
+2021-11-28 03:53:20.706  INFO 23892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-28 03:53:21.023  INFO 23892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-28 03:53:21.066  INFO 23892 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:mysql://localhost:3306/arm (MySQL 8.0)
+2021-11-28 03:53:21.120  INFO 23892 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 15 migrations (execution time 00:00.030s)
+2021-11-28 03:53:21.134  INFO 23892 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `arm`: 1.2.4
+2021-11-28 03:53:21.135  INFO 23892 --- [main] o.f.core.internal.command.DbMigrate      : Schema `arm` is up to date. No migration necessary.
+2021-11-28 03:53:21.221  INFO 23892 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-28 03:53:21.281  INFO 23892 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-28 03:53:21.418  INFO 23892 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-28 03:53:21.529  INFO 23892 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-11-28 03:53:22.180  INFO 23892 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-28 03:53:22.189  INFO 23892 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 03:53:22.609  WARN 23892 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-28 03:53:23.218  INFO 23892 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2021-11-28 03:53:23.260  WARN 23892 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-11-28 03:53:23.289  INFO 23892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2021-11-28 03:53:23.560  INFO 23892 --- [main] org.arm.resource.mngt.ArmRMSApplication  : Started ArmRMSApplication in 7.886 seconds (JVM running for 8.293)
+2021-11-28 03:53:28.107  INFO 23892 --- [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 03:53:28.109  INFO 23892 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-28 03:53:28.111  INFO 23892 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-11-28 03:53:28.314  INFO 23892 --- [http-nio-8000-exec-1] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2021-11-28 03:53:28.320  WARN 23892 --- [http-nio-8000-exec-1] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2021-11-28 03:53:28.322  INFO 23892 --- [http-nio-8000-exec-1] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: http-nio-8000-exec-1
+2021-11-28 03:53:28.379  INFO 23892 --- [http-nio-8000-exec-1] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2021-11-28 03:53:28.380  INFO 23892 --- [http-nio-8000-exec-1] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2021-11-28 03:53:28.381  INFO 23892 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 03:53:28.403  INFO 23892 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Using the following xml files to load custom mappings for the bean mapper instance: [mapping\project-mapper.xml]
+2021-11-28 03:53:28.403  INFO 23892 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Trying to find xml mapping file: mapping\project-mapper.xml
+2021-11-28 03:53:28.404  INFO 23892 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Using URL [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml] to load custom xml mappings
+2021-11-28 03:53:28.488  INFO 23892 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Successfully loaded custom xml mappings from URL: [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml]
+2021-11-28 03:53:28.582  INFO 23892 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2021-11-28 03:53:28.583  INFO 23892 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Using the following xml files to load custom mappings for the bean mapper instance: [mapping\project-mapper.xml]
+2021-11-28 03:53:28.584  INFO 23892 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Trying to find xml mapping file: mapping\project-mapper.xml
+2021-11-28 03:53:28.584  INFO 23892 --- [http-nio-8000-exec-1] org.dozer.DozerBeanMapper                : Using URL [file:/C:/Users/AvinashRavat/training/ARM/acheron-resource-management/arm-resource-mngt-service/target/classes/mapping%5cproject-mapper.xml] to load custom xml mappings

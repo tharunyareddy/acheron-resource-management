@@ -1,19 +1,19 @@
 package org.arm.resource.mngt.api;
 
-import java.sql.Timestamp;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.arm.resource.mngt.entity.Campaign;
-import org.arm.resource.mngt.entity.Priority;
-import org.arm.resource.mngt.entity.Status;
+import org.arm.resource.mngt.entity.Project;
 import org.arm.resource.mngt.service.ICampaignService;
+import org.arm.resource.mngt.vo.CampaignVO;
+import org.dozer.DozerBeanMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -26,6 +26,22 @@ public class CampaignController {
 	@GetMapping("/campaign")
 	public List<Campaign> allCampaign(){
 		return campaignService.getAllCampaign();
+	}
+	
+	@GetMapping("/campaignVO")
+	public List<CampaignVO> allCampaignVO(){
+		// DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
+		List<CampaignVO> campaignVOs=new ArrayList<CampaignVO>();
+		List<Campaign> allCampaigns=campaignService.getAllCampaign();
+		for(Campaign campaign:allCampaigns) {
+			 DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
+			//campaign.getProjects().addAll(campaign.getProjects());
+			 dozerBeanMapper.setMappingFiles(Arrays.asList("mapping\\project-mapper.xml"));
+			 CampaignVO campaignVO = dozerBeanMapper.map(campaign, CampaignVO.class);
+			 campaignVOs.add(campaignVO);
+		 
+		}
+		return campaignVOs;
 	}
 	
 	@GetMapping("/campaign/id/{id}")

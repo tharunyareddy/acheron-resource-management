@@ -7,7 +7,7 @@ import java.util.List;
 
 import org.arm.resource.mngt.entity.Resource;
 import org.arm.resource.mngt.service.ResourceService;
-import org.arm.resource.mngt.vo.ResourceMapper;
+
 import org.arm.resource.mngt.vo.ResourceVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,9 +34,9 @@ public class ResourceController {
 		List<ResourceVO> resourceVO=new ArrayList<ResourceVO>();
 		List<Resource> resourceList=resourceService.findAll();
 		for(Resource resource:resourceList) {
-			ResourceMapper mapper=ResourceMapper.INSTANCE;
-			ResourceVO vo=mapper.fromResource(resource);
-			resourceVO.add(vo);
+			//ResourceMapper mapper=ResourceMapper.INSTANCE;
+			//ResourceVO vo=mapper.fromResource(resource);
+			//resourceVO.add(vo);
 		}
 		return resourceVO;
 	}
