@@ -10,5 +10,6 @@ public interface ITaskService {
 
 	public void createTasks(Task tasks);
 	
+	List<Task> getByDurationLessThan(float availableHours);
 
 }
