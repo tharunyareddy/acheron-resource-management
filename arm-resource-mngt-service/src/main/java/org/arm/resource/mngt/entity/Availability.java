@@ -7,6 +7,8 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,8 +31,11 @@ public class Availability {
 	private Timestamp endDate;
 	@Enumerated(EnumType.STRING)
 	private AvailableStatus availableStatus;
+	@JsonIgnore
 	private Timestamp createDate;
+	@JsonIgnore
 	private Timestamp updateDate;
+	@JsonIgnore
 	private int isDeleted;
 	
 }
