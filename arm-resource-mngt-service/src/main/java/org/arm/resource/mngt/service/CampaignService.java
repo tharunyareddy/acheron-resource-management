@@ -28,9 +28,8 @@ public class CampaignService implements ICampaignService {
 	}
 
 	@Override
-	public Campaign findById(int l) throws IDNotFoundException{
-		Campaign campaignById=campaignRepository.findById(l).get();
-		System.out.println(campaignById);
+	public Campaign findById(int id) throws IDNotFoundException{
+		Campaign campaignById=campaignRepository.findById(id).get();
 		if(campaignById==null) {
 			throw new IDNotFoundException("Id not found");
 		}

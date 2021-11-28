@@ -10,6 +10,8 @@ import org.dozer.DozerBeanMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,12 +24,17 @@ public class CampaignController {
 	Logger logger = LoggerFactory.getLogger(CampaignController.class);
 
 	@GetMapping("/campaign")
-	public List<Campaign> allCampaign() {
-		return campaignService.getAllCampaign();
+	public ResponseEntity<List<Campaign>> allCampaign() {
+		logger.info("All Campaign inside controller");
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("desc", "Get All Campaign List");
+		List<Campaign> allCampaigns= campaignService.getAllCampaign();
+		return ResponseEntity.ok().headers(headers).body(allCampaigns);
 	}
 
 	@GetMapping("/campaignVO")
-	public List<CampaignVO> allCampaignVO() {
+	public ResponseEntity<List<CampaignVO>> allCampaignVO() {
+		logger.info("All Campaign inside controller");
 		List<CampaignVO> campaignVOs = new ArrayList<CampaignVO>();
 		List<Campaign> allCampaigns = campaignService.getAllCampaign();
 		for (Campaign campaign : allCampaigns) {
@@ -37,12 +44,17 @@ public class CampaignController {
 			campaignVOs.add(campaignVO);
 
 		}
-		return campaignVOs;
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("desc", "Get All Campaign List");
+		return ResponseEntity.ok().headers(headers).body(campaignVOs);
 	}
 
 	@GetMapping("/campaign/id/{id}")
-	public Campaign findById(@PathVariable("id") int id) {
-		return campaignService.findById(id);
+	public ResponseEntity<Campaign> findById(@PathVariable("id") int id) {
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("desc", "Get Campaign By ID");
+		Campaign campaignById=campaignService.findById(id);
+		return ResponseEntity.ok().headers(headers).body(campaignById);
 	}
 
 //	@PostMapping("/campaign/create")
