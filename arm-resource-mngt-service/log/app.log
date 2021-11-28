@@ -4406,3 +4406,34 @@ java.util.NoSuchElementException: No value present
 2021-11-28 15:37:43.931  INFO 5320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
 2021-11-28 15:37:44.215  INFO 5320 --- [main] org.arm.resource.mngt.ArmRMSApplication  : Started ArmRMSApplication in 8.18 seconds (JVM running for 8.69)
 2021-11-28 15:37:58.676  INFO 5320 --- [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 15:37:58.678  INFO 5320 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-28 15:37:58.680  INFO 5320 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-11-28 15:48:43.946  INFO 1104 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2021-11-28 15:48:46.049  INFO 1104 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2021-11-28 15:48:46.051  WARN 1104 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/resource-mngt-service/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-11-28 15:48:46.054  INFO 1104 --- [main] org.arm.resource.mngt.ArmRMSApplication  : The following profiles are active: dev
+2021-11-28 15:48:46.516  INFO 1104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-28 15:48:46.686  INFO 1104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 160 ms. Found 4 JPA repository interfaces.
+2021-11-28 15:48:46.863  INFO 1104 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=28650dee-0598-3117-b45b-5f4af37addc4
+2021-11-28 15:48:47.371  INFO 1104 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2021-11-28 15:48:47.380  INFO 1104 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-28 15:48:47.380  INFO 1104 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-11-28 15:48:47.537  INFO 1104 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-28 15:48:47.537  INFO 1104 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1469 ms
+2021-11-28 15:48:47.647  INFO 1104 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.7.3 by Redgate
+2021-11-28 15:48:47.654  INFO 1104 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-28 15:48:47.943  INFO 1104 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-28 15:48:47.985  INFO 1104 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:mysql://localhost:3306/arm (MySQL 8.0)
+2021-11-28 15:48:48.042  INFO 1104 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 15 migrations (execution time 00:00.032s)
+2021-11-28 15:48:48.059  INFO 1104 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `arm`: 1.2.4
+2021-11-28 15:48:48.060  INFO 1104 --- [main] o.f.core.internal.command.DbMigrate      : Schema `arm` is up to date. No migration necessary.
+2021-11-28 15:48:48.148  INFO 1104 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-28 15:48:48.210  INFO 1104 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-28 15:48:48.352  INFO 1104 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-28 15:48:48.483  INFO 1104 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-11-28 15:48:49.186  INFO 1104 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-28 15:48:49.194  INFO 1104 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 15:48:49.644  WARN 1104 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-28 15:48:50.280  INFO 1104 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2021-11-28 15:48:50.328  WARN 1104 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2021-11-28 15:48:50.359  INFO 1104 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
