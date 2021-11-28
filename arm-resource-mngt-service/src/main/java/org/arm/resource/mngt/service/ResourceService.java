@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.arm.resource.mngt.entity.Resource;
 import org.arm.resource.mngt.repository.ResourceRepository;
-import org.arm.resource.mngt.entity.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

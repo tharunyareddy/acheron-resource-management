@@ -1,7 +1,6 @@
 package org.arm.resource.mngt.vo;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -14,7 +13,6 @@ import javax.persistence.OneToOne;
 
 import org.arm.resource.mngt.entity.Availability;
 import org.arm.resource.mngt.entity.Leaves;
-import org.arm.resource.mngt.entity.Task;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -49,5 +47,13 @@ public class ResourceVO implements Serializable {
 	private List<TaskVO> taskList;
 	private String resourceImage;
 	private String region;
+	
+	@OneToOne
+	@JoinColumn(name="availableId")
+	private Availability availability;
+	
+	@OneToOne
+	@JoinColumn(name="leaveId")
+	private Leaves leave;
 
 }

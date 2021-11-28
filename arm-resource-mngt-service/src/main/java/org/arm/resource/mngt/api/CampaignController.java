@@ -28,12 +28,10 @@ public class CampaignController {
 
 	@GetMapping("/campaignVO")
 	public List<CampaignVO> allCampaignVO() {
-		// DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
 		List<CampaignVO> campaignVOs = new ArrayList<CampaignVO>();
 		List<Campaign> allCampaigns = campaignService.getAllCampaign();
 		for (Campaign campaign : allCampaigns) {
 			DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
-			// campaign.getProjects().addAll(campaign.getProjects());
 			dozerBeanMapper.setMappingFiles(Arrays.asList("mapping\\mapper.xml"));
 			CampaignVO campaignVO = dozerBeanMapper.map(campaign, CampaignVO.class);
 			campaignVOs.add(campaignVO);

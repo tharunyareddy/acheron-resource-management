@@ -2,9 +2,7 @@ package org.arm.resource.mngt.service;
 
 import java.util.List;
 
-import org.arm.resource.mngt.entity.Campaign;
 import org.arm.resource.mngt.entity.Project;
-import org.arm.resource.mngt.repository.CampaignRepository;
 import org.arm.resource.mngt.repository.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

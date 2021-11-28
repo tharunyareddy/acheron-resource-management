@@ -24,5 +24,6 @@
 		<class-b>org.arm.resource.mngt.vo.ResourceVO</class-b>
 
 	</mapping>
+	
 
 </mappings>
