@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.arm.resource.mngt.entity.Resource;
 import org.arm.resource.mngt.repository.ResourceRepository;
-import org.arm.resource.mngt.entity.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,5 +32,10 @@ public class ResourceService implements IResourceService {
 		if (allResource.isEmpty())
 			throw new RuntimeException("no resource Available.. ");
 		return allResource;
+	}
+
+	@Override
+	public Resource getById(int id) {
+		return resourceRepository.findById(id).get();
 	}
 }

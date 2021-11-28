@@ -9,4 +9,6 @@ public interface IProjectService {
 	public List<Project> getAllProject();
 
 	public void save(Project project);
+	
+	Project getById(int id);
 }

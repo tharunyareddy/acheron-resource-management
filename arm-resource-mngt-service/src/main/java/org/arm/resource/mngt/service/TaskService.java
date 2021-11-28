@@ -2,7 +2,6 @@ package org.arm.resource.mngt.service;
 
 import java.util.List;
 
-import org.arm.resource.mngt.entity.Campaign;
 import org.arm.resource.mngt.entity.Task;
 import org.arm.resource.mngt.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,5 +33,10 @@ public class TaskService implements ITaskService {
 		if(taskDuration.isEmpty())
 			throw new RuntimeException("Duration is not available");
 		return taskDuration;
+	}
+
+	@Override
+	public Task getById(int id) {
+		return taskRepository.findById(id).get();
 	}
 }
