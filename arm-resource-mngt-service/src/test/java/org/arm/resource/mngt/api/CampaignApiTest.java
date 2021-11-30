@@ -33,9 +33,9 @@ public class CampaignApiTest {
 	public void testGetAllCampaign() {
 
 		HttpEntity<String> entity = new HttpEntity<String>(null, headers);
-		ResponseEntity<List> response = restTemplate.exchange(createURLWithPort("/campaign"), HttpMethod.GET,
+		ResponseEntity<List> response = restTemplate.exchange(createURLWithPort("/campaigns"), HttpMethod.GET,
 				entity, List.class);
-
+		System.out.println(response.getBody());
 		assertEquals(response.getBody().size(), 2);
 
 	}
